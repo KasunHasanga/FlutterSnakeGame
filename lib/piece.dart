@@ -14,6 +14,12 @@ class Piece extends StatefulWidget {
 
 class _PieceState extends State<Piece> with SingleTickerProviderStateMixin{
 AnimationController? _animationController;
+
+@override
+void dispose() {
+    super.dispose();
+    _animationController!.dispose();
+  }
   @override
   void initState() {
     super.initState();
