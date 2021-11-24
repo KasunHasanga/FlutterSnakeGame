@@ -135,7 +135,8 @@ class _GamePageState extends State<GamePage> {
             "Game Over",
             style: TextStyle(color: Colors.white),
           ),content: Text(
-          "Your game is over but you played well. Your score is " + score.toString()+".",
+            (score>10)?"Your game is over but you played well. Your score is " + score.toString()+".": "Your game is over. Your score is " + score.toString()+"."
+          ,
           style: TextStyle(color: Colors.white,fontSize: 20),
         ),
           actions: [
